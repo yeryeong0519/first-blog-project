@@ -1,35 +1,4 @@
-# front_end
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
----
-# Django, Vue, GraphQL을 이용한 블로그 프로젝트
+# 🍪 Django, Vue, GraphQL을 이용한 블로그 프로젝트 
 > 블로그는 _create, read, update, delete_ 작업을 포함한다. 이 프로젝트에서는 Django로 CRUD 작업을 수행하고 블로그 데이터에 대한 **GraphQL API**를 제공하는데 중점을 둔다. Vue는 반응형 데이터 바인딩과 관리하기 쉬운 컴포넌트로 인해 동적 인터페이스를 쉽게 생성 할 수 있다. 또한 GraphQL API 데이터를 처리하므로 Vue Apollo 플러그인을 활용 할 수 있다. 
 
 > 🌵 목표
