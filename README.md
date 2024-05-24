@@ -29,7 +29,7 @@ npm run dev
 npm run build
 ```
 ---
-## Django, Vue, GraphQL을 이용한 블로그 프로젝트
+# Django, Vue, GraphQL을 이용한 블로그 프로젝트
 > 블로그는 _create, read, update, delete_ 작업을 포함한다. 이 프로젝트에서는 Django로 CRUD 작업을 수행하고 블로그 데이터에 대한 **GraphQL API**를 제공하는데 중점을 둔다. Vue는 반응형 데이터 바인딩과 관리하기 쉬운 컴포넌트로 인해 동적 인터페이스를 쉽게 생성 할 수 있다. 또한 GraphQL API 데이터를 처리하므로 Vue Apollo 플러그인을 활용 할 수 있다. 
 
 > 🌵 목표
@@ -50,7 +50,7 @@ npm run build
 * Frontend - Vue.js 3️⃣
 
 
-### Step 1. 개발환경 구축
+## Step 1. 개발환경 구축
 ```
 yeryeongseo@seoyelyeong-ui-MacBookPro Documents % mkdir dvg/
 yeryeongseo@seoyelyeong-ui-MacBookPro Documents % cd dvg/
@@ -143,7 +143,7 @@ dvg/
 
 > 로그인 성공 시 장고 관리자 인터페이스로 이동한다. 현재는 비어있는상태이다. 
 
-### Step2. Django 관리자 생성
+## Step2. Django 관리자 생성
 > 장고 프로젝트의 기초가 마련되었다. 블로그의 핵심 로직을 만들어보자. 이번 단계에서는 블로그 콘텐츠를 작성하고 관리하기위한 데이터 모델과 관리 구성을 만든다.
 
 #### Django 블로그 애플리케이션 생성
@@ -237,7 +237,7 @@ blog/models.py를 열고 settings 모듈을 가져오는 import문을 추가하�
 이제 중지했던 장고 서버를 다시 시작해 관리자 페이지에 다시 접속한다. ![](https://velog.velcdn.com/images/yeryoong/post/586396c5-d7b7-414c-88a0-6c7d8a8b9da2/image.png)
 태그, 프로필 및 게시물 목록에 대한 링크와 추가/편집이 가능한 링크가 있다. 이제 직접 게시물을 추가하고 편집하여 관리자 인터페이스가 어떻게 반응하는지 보자.
 
-### Step 3 Graphene-Django 설정
+## Step 3. Graphene-Django 설정
 > GraphQL을 사용하면 필요한 데이터만 검색 할 수 있으므로 RESTful API에서 일반적인 대용량 응답과 비교하여 사용 할 수 있다. 이는 데이터를 투영하는데 유연성을 제공하므로 GraphQL API를 제공하는 서비스의 로직은 변경하지않고 새로운 방식으로 데이터를 검색 할 수 있다. 지금까지의 작업물을 GraphQL API에 통합하기위해 Graphene-Django를 사용할것이다. 
 
 #### Graphene-Django 설치
@@ -436,13 +436,13 @@ python manage.py runserver
 위의 쿼리를 입력 후 play 버튼을 누르면 게시물 목록을 반환받는다. 
 ![](https://velog.velcdn.com/images/yeryoong/post/1238dddc-a09e-4dff-8076-24eadd9b8086/image.png)
 
-### django-cors-headers 설정
+## Step 4. django-cors-headers 설정
 백엔드와 프론트엔드가 로컬에서 다른 포트에서 실행이 되기때문에, 프로덕션 환경에서 완전히 별개의 도메인에서 실행 될 수 있기 때문에 교차 출처 리소스 공유(Cross-origin resource sharing, CORS)를 처리해야한다. 이를 처리하지 않으면 프론트엔드에서 백엔드로의 요청이 브라우저에 의해 차단된다. django-cors-headers 프로젝트를 사용하면 CORS를 쉽게 처리 할 수 있다. 이 프로젝트를 사용하여 Django가 다른 출처에서 오는 요청에도 응답하도록 설정하면 프론트엔드가 GraphQL API와 원활하게 통신 할 수 있다. 
 
 > 교차 출처 리소스 공유(CORS)란?
 추가 HTTP 헤더를 사용하여 한 출처에서 실행중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근 할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제이다. 웹 애플리케이션은 리소스가 자신의 출처(도메인, 프로토콜, 포트)와 다를 때 교차 출처 HTTP 요청을 실행한다.
 
-#### django-cors-headers 설치
+### django-cors-headers 설치
 'django-cors-headers'를 requirements 파일에 추가한다.
 ![](https://velog.velcdn.com/images/yeryoong/post/a57ed6ba-7236-4369-9a65-8873ac4eefc0/image.png)
 
@@ -472,12 +472,12 @@ CORS_ALLOWED_ORIGINS = [
 
 이제 Django 백엔드가 CORS 설정을 통해 프론트엔드에서의 요청을 허용 할 수 있다.
 
-### Vue.js 설정
+## Step 5. Vue.js 설정
 
-#### Node.js 설치
+### Node.js 설치
 [공식홈페이지](https://nodejs.org/en)에서 다운받아준다.
 
-#### 설치 확인
+### 설치 확인
 ![](https://velog.velcdn.com/images/yeryoong/post/69fc26b3-5110-413c-8452-dd5fd3c9e178/image.png)
 
 설치가 확인되었다면 Vue 프로젝트를 생성할 디렉토리 'dvg'로 이동해 생성한다.
@@ -502,7 +502,7 @@ front_end/ 폴더로 이동하여 프로젝트의 모든 종속 항목을 설치
 
 프로젝트 구조가 마련되고 모든 종속 항목이 설치되었으므로 Vite 개발 서버를 실행 할 수 있다. 
 
-#### Vite란..![](https://velog.velcdn.com/images/yeryoong/post/62291a04-a78a-4020-a425-b187f775d0c9/image.png)
+### Vite란..![](https://velog.velcdn.com/images/yeryoong/post/62291a04-a78a-4020-a425-b187f775d0c9/image.png)
 
 ```
 $ npm run dev
@@ -512,7 +512,7 @@ $ npm run dev
 
 기본적으로 Vite 서버는 5173 포트에서 실행된다. 이제 Django 애플리케이션은 http://localhost:8000 에서 실행되고 Vue 애플리케이션은 http://localhost:5173 에서 실행된다. http://localhost:5173를 방문해보자.![](https://velog.velcdn.com/images/yeryoong/post/39fa1477-8335-4d2e-aaa1-e4bd7d5373fd/image.png)
 
-### 기본 뷰와 컴포넌트 생성
+## Step 7. 기본 뷰와 컴포넌트 생성
 이제 Vue가 실행되므로 컴포넌트를 생성 할 수 있다. 컴포넌트는 프론트엔드의 빌딩 블록이다.
 처음으로 생성할 컴포넌트는 Posts와 Authors를 볼 수 있는 뷰이다. 첫 번째 뷰를 생성하기 전에 정리작업이 필요하다. 
 
