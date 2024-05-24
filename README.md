@@ -512,7 +512,7 @@ $ npm run dev
 
 기본적으로 Vite 서버는 5173 포트에서 실행된다. 이제 Django 애플리케이션은 http://localhost:8000 에서 실행되고 Vue 애플리케이션은 http://localhost:5173 에서 실행된다. http://localhost:5173를 방문해보자.![](https://velog.velcdn.com/images/yeryoong/post/39fa1477-8335-4d2e-aaa1-e4bd7d5373fd/image.png)
 
-## Step 7. 기본 뷰와 컴포넌트 생성
+## Step 6. 기본 뷰와 컴포넌트 생성
 이제 Vue가 실행되므로 컴포넌트를 생성 할 수 있다. 컴포넌트는 프론트엔드의 빌딩 블록이다.
 처음으로 생성할 컴포넌트는 Posts와 Authors를 볼 수 있는 뷰이다. 첫 번째 뷰를 생성하기 전에 정리작업이 필요하다. 
 
