@@ -16,7 +16,7 @@
 
 * Backend - Djanggo
 ---(GraphQL)---
-* Frontend - Vue.js 3️⃣
+* Frontend - Vue.js 3
 
 
 ## Step 1. 개발환경 구축
